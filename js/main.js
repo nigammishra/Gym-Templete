@@ -1,10 +1,10 @@
 /*  ---------------------------------------------------
   Template Name: Gym
-  Description:  Gym Fitness HTML Template
-  Author: Colorlib
-  Author URI: https://colorlib.com
+  Description:  Bhubaneswar Health Club
+  Author: FrontEnd Ace
+  Author URI: https://nigammishra.github.io/Gym-Templete
   Version: 1.0
-  Created: Colorlib
+  Created: FrontEnd Ace
 ---------------------------------------------------------  */
 
 'use strict';
@@ -238,4 +238,27 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 
+
+
+    document.addEventListener('DOMContentLoaded', function () {
+        // Select all "Enroll now" buttons
+        var enrollButtons = document.querySelectorAll('.pricing-btn');
+
+        // Loop through each button
+        enrollButtons.forEach(function (button) {
+            button.addEventListener('click', function (event) {
+                // Prevent default anchor click behavior
+                event.preventDefault();
+
+                // Get the price from the corresponding pricing item
+                var price = this.closest('.ps-item').querySelector('.pi-price h2').textContent;
+
+                // Set the price in the modal input
+                document.getElementById('price').value = price;
+
+                // Show the modal
+                $('#enrollModal').modal('show');
+            });
+        });
+    });
 
