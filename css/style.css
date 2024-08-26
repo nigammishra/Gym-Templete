@@ -3318,3 +3318,11 @@ ol {
 
 /* fade animation fade-in-up */
 /* ============END============= */
+
+
+.gradient-text {
+	background: linear-gradient(90deg, #00FF00, #008000);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+  }
+  
